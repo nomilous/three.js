@@ -8,6 +8,14 @@
       "remote.origin.url": "git@github.com:nomilous/three.js.git",
       "HEAD": "refs/heads/component",
       "version": "ROOT_REPO_REF"
+    },
+    {
+      "root": false,
+      "workDir": "./build/components/three-core",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/three-core.git",
+      "HEAD": "refs/heads/develop",
+      "version": "65e69ea1fd812442bd899d093fa056e125c0e3f9"
     }
   ]
 }
