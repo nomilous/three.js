@@ -2,3 +2,6 @@
 *.swp
 .project
 utils/npm/node_modules/*
+build/components/*
+!build/components/README.md
+!build/components/Makefile

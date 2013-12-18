@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "repos": [
+    {
+      "root": true,
+      "workDir": ".",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/three.js.git",
+      "HEAD": "refs/heads/component",
+      "version": "ROOT_REPO_REF"
+    }
+  ]
+}
