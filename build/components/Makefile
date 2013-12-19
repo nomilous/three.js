@@ -6,7 +6,7 @@
 SRC=../../src
 LIC=../../LICENSE
 
-components: base color math-common render-common webgl-renderer object camera
+components: base color math-common render-common webgl-renderer object camera scene
 
 BASE=\
 	${SRC}/Three.js
@@ -64,6 +64,7 @@ math-common: ${MATH-COMMON}
 	cat ${MATH-COMMON} >> three-math-common/index.js
 
 
+
 RENDER-COMMON=\
 	${SRC}/core/Raycaster.js \
 	${SRC}/core/Projector.js \
@@ -87,6 +88,7 @@ render-common: ${RENDER-COMMON}
 	cat ${RENDER-COMMON} >> three-render-common/index.js
 
 
+
 WEBGL-RENDERER=\
 	${SRC}/extras/shaders/ShaderFlares.js \
 	${SRC}/extras/renderers/plugins/ShadowMapPlugin.js \
@@ -107,7 +109,9 @@ webgl-renderer: ${WEBGL-RENDERER}
 
 
 OBJECT=\
-	${SRC}/core/Object3D.js
+	${SRC}/core/Object3D.js \
+	${SRC}/lights/Light.js \
+	${SRC}/objects/Bone.js
 
 object: ${OBJECT}
 
@@ -135,4 +139,22 @@ camera: ${CAMERA}
 	cp ${LIC} three-camera/
 	echo "module.exports = THREE = require('three');\nrequire('three-object');\nrequire('three-math-common');\n" > three-camera/index.js
 	cat ${CAMERA} >> three-camera/index.js
+
+
+
+SCENE=\
+	${SRC}/scenes/Fog.js \
+	${SRC}/scenes/FogExp2.js \
+	${SRC}/scenes/Scene.js
+
+scene: ${SCENE}
+
+	#
+	# scene
+	# 
+
+	cp ${LIC} three-scene/
+	echo "module.exports = THREE = require('three');\nrequire('three-camera');\nrequire('three-object');\nrequire('three-color');\n" > three-scene/index.js
+	cat ${SCENE} >> three-scene/index.js
+
 
