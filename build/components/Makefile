@@ -126,9 +126,20 @@ webgl-renderer: ${WEBGL-RENDERER}
 OBJECT=\
 	${SRC}/core/Object3D.js \
 	${SRC}/core/Geometry.js \
+	${SRC}/core/BufferGeometry.js \
 	${SRC}/materials/Material.js \
 	${SRC}/lights/Light.js \
 	${SRC}/objects/Bone.js \
+	${SRC}/objects/Line.js \
+	# ${SRC}/objects/Mesh.js \
+	# ${SRC}/objects/ParticleSystem.js \
+	# ${SRC}/objects/Sprite.js \
+	# ${SRC}/extras/objects/ImmediateRenderObject.js \
+	# ${SRC}/extras/objects/LensFlare.js \
+
+	
+
+
 
 object: ${OBJECT}
 
@@ -177,7 +188,7 @@ scene: ${SCENE}
 
 LINE=\
 	${SRC}/materials/LineBasicMaterial.js \
-	${SRC}/materials/LineDashedMaterial.js \
+	${SRC}/materials/LineDashedMaterial.js
 
 line: ${LINE}
 
