@@ -11,11 +11,35 @@
     },
     {
       "root": false,
-      "workDir": "./build/components/three-core",
+      "workDir": "./build/components/three",
       "packageManager": "npm",
-      "remote.origin.url": "git@github.com:nomilous/three-core.git",
-      "HEAD": "refs/heads/develop",
-      "version": "e55efb86b73d96552cc294d44f4d34d9b47b9d02"
+      "remote.origin.url": "git@github.com:nomilous/three.git",
+      "HEAD": "refs/heads/master",
+      "version": "8aa5c5b650831b3bf88061d0d306be0e94937bf4"
+    },
+    {
+      "root": false,
+      "workDir": "./build/components/three-math-common",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/three-math-common.git",
+      "HEAD": "refs/heads/master",
+      "version": "b9bdf65965caa53de20f9ed4c30797ccce4b0e55"
+    },
+    {
+      "root": false,
+      "workDir": "./build/components/three-render-common",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/three-render-common.git",
+      "HEAD": "refs/heads/master",
+      "version": "e8f483a5ea90cab6ae950d17bcdbc3c9ad029ffc"
+    },
+    {
+      "root": false,
+      "workDir": "./build/components/three-webgl-renderer",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/three-webgl-renderer.git",
+      "HEAD": "refs/heads/master",
+      "version": "4a2155038fc14da864400162803b184acd5f82ae"
     }
   ]
 }
