@@ -11,6 +11,7 @@ CORE=\
 	${SRC}/math/Color.js \
 	${SRC}/math/Vector3.js \
 	${SRC}/math/Euler.js \
+	${SRC}/math/Quaternion.js \
 	${SRC}/math/Box3.js \
 	${SRC}/math/Sphere.js \
 	${SRC}/math/Frustum.js \
