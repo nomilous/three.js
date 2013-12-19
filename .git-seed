@@ -23,7 +23,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-camera.git",
       "HEAD": "refs/heads/master",
-      "version": "1943af4aaec18251a6aa22af86725ac9be67ebfe"
+      "version": "c5848764bbfcc53709afb501d3306521175c563d"
     },
     {
       "root": false,
@@ -39,7 +39,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-object.git",
       "HEAD": "refs/heads/master",
-      "version": "f716ecf8a3724126fea47500c1c7fb9c52015b25"
+      "version": "ee4174853a150e59b072cb2f2df4f4df8a0f84d8"
     },
     {
       "root": false,

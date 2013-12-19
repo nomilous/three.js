@@ -6,7 +6,7 @@
 SRC=../../src
 LIC=../../LICENSE
 
-components: base math-common render-common webgl-renderer camera
+components: base math-common render-common webgl-renderer object camera
 
 
 base:
