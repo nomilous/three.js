@@ -73,6 +73,8 @@ RENDER-COMMON=\
 	${SRC}/materials/Material.js \
 	${SRC}/materials/ShaderMaterial.js \
 	${SRC}/renderers/shaders/UniformsLib.js \
+	${SRC}/renderers/WebGLRenderTarget.js \
+	${SRC}/renderers/WebGLRenderTargetCube.js \
 	${SRC}/renderers/shaders/UniformsUtils.js \
 	${SRC}/renderers/shaders/ShaderChunk.js \
 	${SRC}/renderers/shaders/ShaderLib.js

@@ -55,7 +55,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-render-common.git",
       "HEAD": "refs/heads/master",
-      "version": "dba79e1d13ab4617b0face1c6215f9c46edcd63e"
+      "version": "2003a998777802d4f6479a24d4458f840b3c1211"
     },
     {
       "root": false,
@@ -63,7 +63,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-scene.git",
       "HEAD": "refs/heads/master",
-      "version": "dd67de022bf5dc8ddf9c5eda8ed7a3dcd04788db"
+      "version": "3db1141da21b187538315b4f89005a880a41f0f8"
     },
     {
       "root": false,
