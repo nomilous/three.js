@@ -7,7 +7,15 @@ SRC=../../src
 LIC=../../LICENSE
 
 
-CORE=${SRC}/renderers/WebGLRenderer.js
+CORE=\
+	${SRC}/math/Color.js \
+	${SRC}/math/Vector3.js \
+	${SRC}/math/Euler.js \
+	${SRC}/math/Box3.js \
+	${SRC}/math/Sphere.js \
+	${SRC}/math/Frustum.js \
+	${SRC}/renderers/WebGLRenderer.js
+
 
 core: ${CORE}
 	cp ${LIC} three-core/
