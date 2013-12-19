@@ -6,7 +6,7 @@
 SRC=../../src
 LIC=../../LICENSE
 
-components: base color math-common render-common webgl-renderer object camera scene
+components: base system color math-common render-common webgl-renderer object camera scene
 
 BASE=\
 	${SRC}/Three.js
@@ -20,6 +20,21 @@ base: ${BASE}
 	cp ${LIC} three/
 	cat ${BASE} > three/index.js
 	echo "\nmodule.exports = THREE;\n" >> three/index.js
+
+
+
+SYSTEM=\
+	${SRC}/core/EventDispatcher.js
+
+system: ${SYSTEM}
+
+	#
+	# system
+	#
+
+	cp ${LIC} three-system/
+	echo "module.exports = THREE = require('three');\n\n" > three-system/index.js
+	cat ${SYSTEM} >> three-system/index.js
 
 
 
@@ -68,9 +83,7 @@ math-common: ${MATH-COMMON}
 RENDER-COMMON=\
 	${SRC}/core/Raycaster.js \
 	${SRC}/core/Projector.js \
-	${SRC}/core/EventDispatcher.js \
 	${SRC}/textures/Texture.js \
-	${SRC}/materials/Material.js \
 	${SRC}/materials/ShaderMaterial.js \
 	${SRC}/renderers/shaders/UniformsLib.js \
 	${SRC}/renderers/WebGLRenderTarget.js \
@@ -86,7 +99,7 @@ render-common: ${RENDER-COMMON}
 	#
 
 	cp ${LIC} three-render-common/
-	echo "module.exports = THREE = require('three');\nrequire('three-color');\nrequire('three-math-common');\n\n" > three-render-common/index.js
+	echo "module.exports = THREE = require('three');\n\nrequire('three-system');\nrequire('three-color');\nrequire('three-object');\n\n" > three-render-common/index.js
 	cat ${RENDER-COMMON} >> three-render-common/index.js
 
 
@@ -112,8 +125,10 @@ webgl-renderer: ${WEBGL-RENDERER}
 
 OBJECT=\
 	${SRC}/core/Object3D.js \
+	${SRC}/core/Geometry.js \
+	${SRC}/materials/Material.js \
 	${SRC}/lights/Light.js \
-	${SRC}/objects/Bone.js
+	${SRC}/objects/Bone.js \
 
 object: ${OBJECT}
 
@@ -122,7 +137,7 @@ object: ${OBJECT}
 	#
 
 	cp ${LIC} three-object/
-	echo "module.exports = THREE = require('three');\nrequire('three-math-common');\n" > three-object/index.js
+	echo "module.exports = THREE = require('three');\nrequire('three-system');\nrequire('three-math-common');\n" > three-object/index.js
 	cat ${OBJECT} >> three-object/index.js
 
 

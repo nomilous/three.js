@@ -47,7 +47,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-object.git",
       "HEAD": "refs/heads/master",
-      "version": "a9d04d75cca9b2d1608f4a6c66838d4013f0aa33"
+      "version": "c3f4054f0579c8b4213cb01aa4188f74293b3e80"
     },
     {
       "root": false,
@@ -55,7 +55,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-render-common.git",
       "HEAD": "refs/heads/master",
-      "version": "2003a998777802d4f6479a24d4458f840b3c1211"
+      "version": "143c5e7c8349de4e851f464ce4c7ca02859541f7"
     },
     {
       "root": false,
@@ -64,6 +64,14 @@
       "remote.origin.url": "git@github.com:nomilous/three-scene.git",
       "HEAD": "refs/heads/master",
       "version": "3db1141da21b187538315b4f89005a880a41f0f8"
+    },
+    {
+      "root": false,
+      "workDir": "./build/components/three-system",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/three-system.git",
+      "HEAD": "refs/heads/master",
+      "version": "25275474224678d4960346fcb4dfbc83fe6ce48f"
     },
     {
       "root": false,
