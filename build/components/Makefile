@@ -6,25 +6,40 @@
 SRC=../../src
 LIC=../../LICENSE
 
-components: base math-common render-common webgl-renderer object camera
+components: base color math-common render-common webgl-renderer object camera
 
+BASE=\
+	${SRC}/Three.js
 
-base:
+base: ${BASE}
 
 	#
 	# base
 	#
 
 	cp ${LIC} three/
-	cp ${SRC}/Three.js three/index.js
+	cat ${BASE} > three/index.js
 	echo "\nmodule.exports = THREE;\n" >> three/index.js
 
+
+
+COLOR=\
+	${SRC}/math/Color.js
+
+color:
+
+	#
+	# color
+	#
+
+	cp ${LIC} three-color/
+	echo "module.exports = THREE = require('three');\n\n" > three-color/index.js
+	cat ${COLOR} >> three-color/index.js
 
 
 
 MATH-COMMON=\
 	${SRC}/math/Math.js \
-	${SRC}/math/Color.js \
 	${SRC}/math/Quaternion.js \
 	${SRC}/math/Euler.js \
 	${SRC}/math/Vector2.js \
@@ -68,7 +83,7 @@ render-common: ${RENDER-COMMON}
 	#
 
 	cp ${LIC} three-render-common/
-	echo "module.exports = THREE = require('three'); require('three-math-common');\n\n" > three-render-common/index.js
+	echo "module.exports = THREE = require('three');\nrequire('three-color');\nrequire('three-math-common');\n\n" > three-render-common/index.js
 	cat ${RENDER-COMMON} >> three-render-common/index.js
 
 
@@ -90,6 +105,7 @@ webgl-renderer: ${WEBGL-RENDERER}
 	cat ${WEBGL-RENDERER} >> three-webgl-renderer/index.js
 
 
+
 OBJECT=\
 	${SRC}/core/Object3D.js
 
@@ -102,6 +118,7 @@ object: ${OBJECT}
 	cp ${LIC} three-object/
 	echo "module.exports = THREE = require('three');\nrequire('three-math-common');\n" > three-object/index.js
 	cat ${OBJECT} >> three-object/index.js
+
 
 
 CAMERA=\

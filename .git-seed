@@ -27,11 +27,19 @@
     },
     {
       "root": false,
+      "workDir": "./build/components/three-color",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/three-color.git",
+      "HEAD": "refs/heads/master",
+      "version": "dc4dc430f747c04bd9218da823a08b552bd3293f"
+    },
+    {
+      "root": false,
       "workDir": "./build/components/three-math-common",
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-math-common.git",
       "HEAD": "refs/heads/master",
-      "version": "b9bdf65965caa53de20f9ed4c30797ccce4b0e55"
+      "version": "bd39f0f55f2be13f45c51039782fa48ab4aac27d"
     },
     {
       "root": false,
@@ -47,7 +55,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-render-common.git",
       "HEAD": "refs/heads/master",
-      "version": "e8f483a5ea90cab6ae950d17bcdbc3c9ad029ffc"
+      "version": "dba79e1d13ab4617b0face1c6215f9c46edcd63e"
     },
     {
       "root": false,
