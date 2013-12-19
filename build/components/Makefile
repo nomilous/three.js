@@ -6,7 +6,7 @@
 SRC=../../src
 LIC=../../LICENSE
 
-components: base system color math-common render-common webgl-renderer object camera scene
+components: base system color math-common render-common webgl-renderer object camera scene line
 
 BASE=\
 	${SRC}/Three.js
@@ -137,7 +137,7 @@ object: ${OBJECT}
 	#
 
 	cp ${LIC} three-object/
-	echo "module.exports = THREE = require('three');\nrequire('three-system');\nrequire('three-math-common');\n" > three-object/index.js
+	echo "module.exports = THREE = require('three');\nrequire('three-system');\nrequire('three-math-common');\nrequire('three-color');\n" > three-object/index.js
 	cat ${OBJECT} >> three-object/index.js
 
 
@@ -174,4 +174,18 @@ scene: ${SCENE}
 	echo "module.exports = THREE = require('three');\nrequire('three-camera');\nrequire('three-object');\nrequire('three-color');\n" > three-scene/index.js
 	cat ${SCENE} >> three-scene/index.js
 
+
+LINE=\
+	${SRC}/materials/LineBasicMaterial.js \
+	${SRC}/materials/LineDashedMaterial.js \
+
+line: ${LINE}
+
+	#
+	# line
+	#
+
+	cp ${LIC} three-line/
+	echo "module.exports = THREE = require('three');\nrequire('three-object');\n" > three-line/index.js
+	cat ${LINE} >> three-line/index.js
 

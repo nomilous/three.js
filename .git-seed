@@ -35,6 +35,14 @@
     },
     {
       "root": false,
+      "workDir": "./build/components/three-line",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/three-line.git",
+      "HEAD": "refs/heads/master",
+      "version": "0bee5b36584bae50daf00fdb38a88d57ea982fe5"
+    },
+    {
+      "root": false,
       "workDir": "./build/components/three-math-common",
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-math-common.git",
@@ -47,7 +55,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-object.git",
       "HEAD": "refs/heads/master",
-      "version": "c3f4054f0579c8b4213cb01aa4188f74293b3e80"
+      "version": "6b4c10f251b47414bf7e40cebb086ff4312e48f9"
     },
     {
       "root": false,
