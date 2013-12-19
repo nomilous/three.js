@@ -64,7 +64,7 @@ RENDER-COMMON=\
 render-common: ${RENDER-COMMON}
 
 	#
-	# math common
+	# render common
 	#
 
 	cp ${LIC} three-render-common/
