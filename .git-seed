@@ -19,11 +19,27 @@
     },
     {
       "root": false,
+      "workDir": "./build/components/three-camera",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/three-camera.git",
+      "HEAD": "refs/heads/master",
+      "version": "1943af4aaec18251a6aa22af86725ac9be67ebfe"
+    },
+    {
+      "root": false,
       "workDir": "./build/components/three-math-common",
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-math-common.git",
       "HEAD": "refs/heads/master",
       "version": "b9bdf65965caa53de20f9ed4c30797ccce4b0e55"
+    },
+    {
+      "root": false,
+      "workDir": "./build/components/three-object",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/three-object.git",
+      "HEAD": "refs/heads/master",
+      "version": "f716ecf8a3724126fea47500c1c7fb9c52015b25"
     },
     {
       "root": false,

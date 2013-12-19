@@ -6,7 +6,7 @@
 SRC=../../src
 LIC=../../LICENSE
 
-components: base math-common render-common webgl-renderer
+components: base math-common render-common webgl-renderer camera
 
 
 base:
@@ -72,8 +72,6 @@ render-common: ${RENDER-COMMON}
 	cat ${RENDER-COMMON} >> three-render-common/index.js
 
 
-
-
 WEBGL-RENDERER=\
 	${SRC}/extras/shaders/ShaderFlares.js \
 	${SRC}/extras/renderers/plugins/ShadowMapPlugin.js \
@@ -92,4 +90,32 @@ webgl-renderer: ${WEBGL-RENDERER}
 	cat ${WEBGL-RENDERER} >> three-webgl-renderer/index.js
 
 
+OBJECT=\
+	${SRC}/core/Object3D.js
+
+object: ${OBJECT}
+
+	#
+	# object
+	#
+
+	cp ${LIC} three-object/
+	echo "module.exports = THREE = require('three');\nrequire('three-math-common');\n" > three-object/index.js
+	cat ${OBJECT} >> three-object/index.js
+
+
+CAMERA=\
+	${SRC}/cameras/Camera.js \
+	${SRC}/cameras/OrthographicCamera.js \
+	${SRC}/cameras/PerspectiveCamera.js
+
+camera: ${CAMERA}
+
+	#
+	# camera
+	# 
+
+	cp ${LIC} three-camera/
+	echo "module.exports = THREE = require('three');\nrequire('three-object');\nrequire('three-math-common');\n" > three-camera/index.js
+	cat ${CAMERA} >> three-camera/index.js
 
