@@ -64,9 +64,9 @@ base: ${BASE}
 	# base
 	#
 
-	cp ${LIC} three/
-	cat ${BASE} > three/index.js
-	echo "\nmodule.exports = THREE;\n" >> three/index.js
+	cp ${LIC} three-base/
+	cat ${BASE} > three-base/index.js
+	echo "\nmodule.exports = THREE;\n" >> three-base/index.js
 
 
 
