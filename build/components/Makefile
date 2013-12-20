@@ -192,6 +192,9 @@ webgl-renderer: ${WEBGL-RENDERER}
 	\n\
 	/* instanceof-U-later */ \n\
 	\n\
+	if (typeof THREE.Light                 == 'undefined') THREE.Light                 = function() {}; \n\
+	if (typeof THREE.Bone                  == 'undefined') THREE.Bone                  = function() {}; \n\
+	\n\
 	if (typeof THREE.BufferGeometry        == 'undefined') THREE.BufferGeometry        = function() {}; \n\
 	if (typeof THREE.Mesh                  == 'undefined') THREE.Mesh                  = function() {}; \n\
 	if (typeof THREE.Line                  == 'undefined') THREE.Line                  = function() {}; \n\

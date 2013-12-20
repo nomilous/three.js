@@ -87,7 +87,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-webgl-renderer.git",
       "HEAD": "refs/heads/master",
-      "version": "c10b67016a97f668984ccd9747b0ff88edf5ab63"
+      "version": "6d8eb203e57aaef827af40841f45be1a1711c864"
     }
   ]
 }
