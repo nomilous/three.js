@@ -50,6 +50,10 @@ tag:
 		fi \
 	done
 
+	#
+	# TODO: also change version inside each relevant component.json and dependancies automatically
+	#
+
 
 BASE=\
 	${SRC}/Three.js
