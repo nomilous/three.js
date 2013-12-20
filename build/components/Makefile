@@ -104,42 +104,11 @@ render-common: ${RENDER-COMMON}
 
 
 
-WEBGL-RENDERER=\
-	${SRC}/extras/shaders/ShaderFlares.js \
-	${SRC}/extras/renderers/plugins/ShadowMapPlugin.js \
-	${SRC}/extras/renderers/plugins/SpritePlugin.js \
-	${SRC}/extras/renderers/plugins/LensFlarePlugin.js \
-	${SRC}/renderers/WebGLRenderer.js
-
-webgl-renderer: ${WEBGL-RENDERER}
-
-	#
-	# webgl renderer
-	#
-
-	cp ${LIC} three-webgl-renderer/
-	echo "module.exports = THREE = require('three');\nrequire('three-render-common');\n" > three-webgl-renderer/index.js
-	cat ${WEBGL-RENDERER} >> three-webgl-renderer/index.js
-
-
-
 OBJECT=\
 	${SRC}/core/Object3D.js \
 	${SRC}/core/Geometry.js \
 	${SRC}/core/BufferGeometry.js \
-	${SRC}/materials/Material.js \
-	${SRC}/lights/Light.js \
-	${SRC}/objects/Bone.js \
-	${SRC}/objects/Line.js \
-	# ${SRC}/objects/Mesh.js \
-	# ${SRC}/objects/ParticleSystem.js \
-	# ${SRC}/objects/Sprite.js \
-	# ${SRC}/extras/objects/ImmediateRenderObject.js \
-	# ${SRC}/extras/objects/LensFlare.js \
-
-	
-
-
+	${SRC}/materials/Material.js 
 
 object: ${OBJECT}
 
@@ -188,7 +157,8 @@ scene: ${SCENE}
 
 LINE=\
 	${SRC}/materials/LineBasicMaterial.js \
-	${SRC}/materials/LineDashedMaterial.js
+	${SRC}/materials/LineDashedMaterial.js \
+	${SRC}/objects/Line.js
 
 line: ${LINE}
 
@@ -199,4 +169,38 @@ line: ${LINE}
 	cp ${LIC} three-line/
 	echo "module.exports = THREE = require('three');\nrequire('three-object');\n" > three-line/index.js
 	cat ${LINE} >> three-line/index.js
+
+
+
+WEBGL-RENDERER=\
+	${SRC}/extras/shaders/ShaderFlares.js \
+	${SRC}/extras/renderers/plugins/ShadowMapPlugin.js \
+	${SRC}/extras/renderers/plugins/SpritePlugin.js \
+	${SRC}/extras/renderers/plugins/LensFlarePlugin.js \
+	${SRC}/renderers/WebGLRenderer.js
+
+webgl-renderer: ${WEBGL-RENDERER}
+
+	#
+	# webgl renderer
+	#
+
+	cp ${LIC} three-webgl-renderer/
+	echo "\
+	module.exports = THREE = require('three'); \n\
+	require('three-render-common'); \n\
+	\n\
+	/* instanceof-U-later */ \n\
+	\n\
+	if (typeof THREE.BufferGeometry        == 'undefined') THREE.BufferGeometry        = function() {}; \n\
+	if (typeof THREE.Mesh                  == 'undefined') THREE.Mesh                  = function() {}; \n\
+	if (typeof THREE.Line                  == 'undefined') THREE.Line                  = function() {}; \n\
+	if (typeof THREE.ParticleSystem        == 'undefined') THREE.ParticleSystem        = function() {}; \n\
+	if (typeof THREE.ImmediateRenderObject == 'undefined') THREE.ImmediateRenderObject = function() {}; \n\
+	if (typeof THREE.Sprite                == 'undefined') THREE.Sprite                = function() {}; \n\
+	if (typeof THREE.LensFlare             == 'undefined') THREE.LensFlare             = function() {}; \n\
+	\n\
+	\n\
+	" > three-webgl-renderer/index.js
+	cat ${WEBGL-RENDERER} >> three-webgl-renderer/index.js
 

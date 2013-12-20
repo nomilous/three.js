@@ -39,7 +39,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-line.git",
       "HEAD": "refs/heads/master",
-      "version": "0bee5b36584bae50daf00fdb38a88d57ea982fe5"
+      "version": "8385b0474502745e5af53030fb087147a1e78c8f"
     },
     {
       "root": false,
@@ -55,7 +55,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-object.git",
       "HEAD": "refs/heads/master",
-      "version": "6b4c10f251b47414bf7e40cebb086ff4312e48f9"
+      "version": "5cfc80db0e8a0af48172098b10a7e0300ee7cd0f"
     },
     {
       "root": false,
@@ -87,7 +87,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-webgl-renderer.git",
       "HEAD": "refs/heads/master",
-      "version": "4a2155038fc14da864400162803b184acd5f82ae"
+      "version": "c10b67016a97f668984ccd9747b0ff88edf5ab63"
     }
   ]
 }
