@@ -59,6 +59,14 @@
     },
     {
       "root": false,
+      "workDir": "./build/components/three-particle",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/three-particle.git",
+      "HEAD": "refs/heads/master",
+      "version": "233a6b15a2506afb820324d129419027a55e6dc4"
+    },
+    {
+      "root": false,
       "workDir": "./build/components/three-render-common",
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-render-common.git",

@@ -6,7 +6,7 @@
 SRC=../../src
 LIC=../../LICENSE
 
-components: base system color math-common render-common webgl-renderer object camera scene line
+components: base system color math-common render-common webgl-renderer object camera scene line particle
 
 BASE=\
 	${SRC}/Three.js
@@ -156,23 +156,6 @@ scene: ${SCENE}
 	cat ${SCENE} >> three-scene/index.js
 
 
-LINE=\
-	${SRC}/materials/LineBasicMaterial.js \
-	${SRC}/materials/LineDashedMaterial.js \
-	${SRC}/objects/Line.js
-
-line: ${LINE}
-
-	#
-	# line
-	#
-
-	cp ${LIC} three-line/
-	echo "module.exports = THREE = require('three');\nrequire('three-object');\n" > three-line/index.js
-	cat ${LINE} >> three-line/index.js
-
-
-
 WEBGL-RENDERER=\
 	${SRC}/extras/shaders/ShaderFlares.js \
 	${SRC}/extras/renderers/plugins/ShadowMapPlugin.js \
@@ -223,4 +206,45 @@ webgl-renderer: ${WEBGL-RENDERER}
 	\n\
 	" > three-webgl-renderer/index.js
 	cat ${WEBGL-RENDERER} >> three-webgl-renderer/index.js
+
+
+
+
+
+
+
+
+
+LINE=\
+	${SRC}/materials/LineBasicMaterial.js \
+	${SRC}/materials/LineDashedMaterial.js \
+	${SRC}/objects/Line.js
+
+line: ${LINE}
+
+	#
+	# line
+	#
+
+	cp ${LIC} three-line/
+	echo "module.exports = THREE = require('three');\nrequire('three-object');\n" > three-line/index.js
+	cat ${LINE} >> three-line/index.js
+
+
+
+PARTICLE=\
+	${SRC}/materials/ParticleSystemMaterial.js \
+	${SRC}/objects/ParticleSystem.js
+
+particle: ${PARTICLE}
+
+	#
+	# particle
+	#
+
+	cp ${LIC} three-particle/
+	echo "module.exports = THREE = require('three');\nrequire('three-object');\n" > three-particle/index.js
+	cat ${PARTICLE} >> three-particle/index.js
+
+
 
