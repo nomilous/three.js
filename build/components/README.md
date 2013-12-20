@@ -42,3 +42,5 @@ instanceof all over the renderer makes it a bit tricky to break out into compone
    5 instanceof THREE.WebGLRenderTargetCube
 
 ```
+
+see `instanceof-U-later` in Makefile

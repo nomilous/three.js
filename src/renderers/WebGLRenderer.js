@@ -4075,6 +4075,9 @@ THREE.WebGLRenderer = function ( parameters ) {
 
 		var u, a, identifiers, i, parameters, maxLightCount, maxBones, maxShadows, shaderID;
 
+		// TODO: seems like shaderID can be moved to material.shaderID
+		//       making this if-stack unnecessary
+
 		if ( material instanceof THREE.MeshDepthMaterial ) {
 
 			shaderID = 'depth';

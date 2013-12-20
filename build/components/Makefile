@@ -192,17 +192,25 @@ webgl-renderer: ${WEBGL-RENDERER}
 	\n\
 	/* instanceof-U-later */ \n\
 	\n\
-	if (typeof THREE.Light                 == 'undefined') THREE.Light                 = function() {}; \n\
-	if (typeof THREE.Bone                  == 'undefined') THREE.Bone                  = function() {}; \n\
+	if (typeof THREE.Light                  == 'undefined') THREE.Light                  = function() {}; \n\
+	if (typeof THREE.Bone                   == 'undefined') THREE.Bone                   = function() {}; \n\
 	\n\
-	if (typeof THREE.BufferGeometry        == 'undefined') THREE.BufferGeometry        = function() {}; \n\
-	if (typeof THREE.Mesh                  == 'undefined') THREE.Mesh                  = function() {}; \n\
-	if (typeof THREE.Line                  == 'undefined') THREE.Line                  = function() {}; \n\
-	if (typeof THREE.ParticleSystem        == 'undefined') THREE.ParticleSystem        = function() {}; \n\
-	if (typeof THREE.ImmediateRenderObject == 'undefined') THREE.ImmediateRenderObject = function() {}; \n\
-	if (typeof THREE.Sprite                == 'undefined') THREE.Sprite                = function() {}; \n\
-	if (typeof THREE.LensFlare             == 'undefined') THREE.LensFlare             = function() {}; \n\
+	if (typeof THREE.BufferGeometry         == 'undefined') THREE.BufferGeometry         = function() {}; \n\
+	if (typeof THREE.Mesh                   == 'undefined') THREE.Mesh                   = function() {}; \n\
+	if (typeof THREE.Line                   == 'undefined') THREE.Line                   = function() {}; \n\
+	if (typeof THREE.ParticleSystem         == 'undefined') THREE.ParticleSystem         = function() {}; \n\
+	if (typeof THREE.ImmediateRenderObject  == 'undefined') THREE.ImmediateRenderObject  = function() {}; \n\
+	if (typeof THREE.Sprite                 == 'undefined') THREE.Sprite                 = function() {}; \n\
+	if (typeof THREE.LensFlare              == 'undefined') THREE.LensFlare              = function() {}; \n\
 	\n\
+	if (typeof THREE.MeshFaceMaterial       == 'undefined') THREE.MeshFaceMaterial       = function() {}; \n\
+	if (typeof THREE.MeshDepthMaterial      == 'undefined') THREE.MeshDepthMaterial      = function() {}; \n\
+	if (typeof THREE.MeshNormalMaterial     == 'undefined') THREE.MeshNormalMaterial     = function() {}; \n\
+	if (typeof THREE.MeshLambertMaterial    == 'undefined') THREE.MeshLambertMaterial    = function() {}; \n\
+	if (typeof THREE.MeshPhongMaterial      == 'undefined') THREE.MeshPhongMaterial      = function() {}; \n\
+	if (typeof THREE.LineBasicMaterial      == 'undefined') THREE.LineBasicMaterial      = function() {}; \n\
+	if (typeof THREE.LineDashedMaterial     == 'undefined') THREE.LineDashedMaterial     = function() {}; \n\
+	if (typeof THREE.ParticleSystemMaterial == 'undefined') THREE.ParticleSystemMaterial = function() {}; \n\
 	\n\
 	" > three-webgl-renderer/index.js
 	cat ${WEBGL-RENDERER} >> three-webgl-renderer/index.js
