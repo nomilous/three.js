@@ -83,6 +83,14 @@
     },
     {
       "root": false,
+      "workDir": "./build/components/three-stats",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/three-stats.git",
+      "HEAD": "refs/heads/master",
+      "version": "b9dd5fe4a7c55f178aa4310cee0725e3d02d77de"
+    },
+    {
+      "root": false,
       "workDir": "./build/components/three-system",
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-system.git",

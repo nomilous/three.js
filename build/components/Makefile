@@ -7,6 +7,8 @@
 # 
 # make tag                                                             # retag version across entire set
 # 
+# make stats                                                           # mrdoob/stats.js managed separately
+# 
 
 #
 # total Makefile novice here... so, um, here follows hopefully coherent and platform compatable
@@ -288,4 +290,11 @@ particle: ${PARTICLE}
 	cp ${LIC} three-particle/
 	echo "module.exports = THREE = require('three');\nrequire('three-object');\n" > three-particle/index.js
 	cat ${PARTICLE} >> three-particle/index.js
+
+
+stats: 
+	curl -s https://raw.github.com/mrdoob/stats.js/master/LICENSE > three-stats/LICENSE
+	curl -s https://raw.github.com/mrdoob/stats.js/master/src/Stats.js > three-stats/index.js
+	echo "\nmodule.exports = Stats;\n" >> three-stats/index.js
+
 
