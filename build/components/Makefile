@@ -96,6 +96,7 @@ render-common: ${RENDER-COMMON}
 
 	#
 	# render common
+	# * perhaps ShaderMaterial can be moved to the instanceof-U-later
 	#
 
 	cp ${LIC} three-render-common/
@@ -217,6 +218,8 @@ webgl-renderer: ${WEBGL-RENDERER}
 	if ('undefined' == typeof THREE.PointLight            ) THREE.PointLight             = function() {}; \n\
 	if ('undefined' == typeof THREE.SpotLight             ) THREE.SpotLight              = function() {}; \n\
 	if ('undefined' == typeof THREE.HemisphereLight       ) THREE.HemisphereLight        = function() {}; \n\
+	\n\
+	if ('undefined' == typeof THREE.SkinnedMesh           ) THREE.SkinnedMesh            = function() {}; \n\
 	\n\
 	" > three-webgl-renderer/index.js
 	cat ${WEBGL-RENDERER} >> three-webgl-renderer/index.js
