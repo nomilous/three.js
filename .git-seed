@@ -11,11 +11,11 @@
     },
     {
       "root": false,
-      "workDir": "./build/components/three",
+      "workDir": "./build/components/three-base",
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three.git",
       "HEAD": "refs/heads/master",
-      "version": "8aa5c5b650831b3bf88061d0d306be0e94937bf4"
+      "version": "1c80f2cd0f7e505452ddf6199c08b2da62247db5"
     },
     {
       "root": false,
@@ -23,7 +23,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-camera.git",
       "HEAD": "refs/heads/master",
-      "version": "c5848764bbfcc53709afb501d3306521175c563d"
+      "version": "412807afa745bae9110c5856065b302c816c70ec"
     },
     {
       "root": false,
@@ -31,7 +31,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-color.git",
       "HEAD": "refs/heads/master",
-      "version": "3f61263f8e0563ffc6ba9a97b3601a21d4ecf2c9"
+      "version": "87aeec022014dfd1e415f2212ae099b4f92deb52"
     },
     {
       "root": false,
@@ -39,7 +39,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-line.git",
       "HEAD": "refs/heads/master",
-      "version": "8385b0474502745e5af53030fb087147a1e78c8f"
+      "version": "f94009bc9fd9caeed4b1f3d5efd184274969f816"
     },
     {
       "root": false,
@@ -47,7 +47,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-math-common.git",
       "HEAD": "refs/heads/master",
-      "version": "bd39f0f55f2be13f45c51039782fa48ab4aac27d"
+      "version": "c8edbefb8d5353d0d1c4c38356b143cc2d28efc9"
     },
     {
       "root": false,
@@ -55,7 +55,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-object.git",
       "HEAD": "refs/heads/master",
-      "version": "5cfc80db0e8a0af48172098b10a7e0300ee7cd0f"
+      "version": "0451a0338f5bfb5fb04a6d21b2dd3c2ff054bfd9"
     },
     {
       "root": false,
@@ -63,7 +63,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-particle.git",
       "HEAD": "refs/heads/master",
-      "version": "233a6b15a2506afb820324d129419027a55e6dc4"
+      "version": "1e9ff7530b137ea36938b229673aa3fba6caa3fd"
     },
     {
       "root": false,
@@ -71,7 +71,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-render-common.git",
       "HEAD": "refs/heads/master",
-      "version": "143c5e7c8349de4e851f464ce4c7ca02859541f7"
+      "version": "d8c237723c8ebd10fff0c464fc2e57fece10c5a8"
     },
     {
       "root": false,
@@ -79,7 +79,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-scene.git",
       "HEAD": "refs/heads/master",
-      "version": "3db1141da21b187538315b4f89005a880a41f0f8"
+      "version": "d2ad28d2244abcb51c01edacc44e91c78281c69b"
     },
     {
       "root": false,
@@ -87,7 +87,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-system.git",
       "HEAD": "refs/heads/master",
-      "version": "25275474224678d4960346fcb4dfbc83fe6ce48f"
+      "version": "1bd1944fc13cd05367cb6303a691f9d1da30807a"
     },
     {
       "root": false,
@@ -95,7 +95,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/three-webgl-renderer.git",
       "HEAD": "refs/heads/master",
-      "version": "b5508827ecb76f66ea5a71e78d2dd0f2b4af1cd8"
+      "version": "6a768b0d12debd584fb77079364ff20c70af9dfb"
     }
   ]
 }

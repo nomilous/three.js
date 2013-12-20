@@ -1,12 +1,55 @@
-#
-# total novice here... so, um, 
-#
+# 
+# cd ../../ && git pull https://github.com/mrdoob/three.js.git master  # refresh from upstream
+# cd - && make                                                         # rebuilds the entire set
+# git seed status                                                      # informs changes across entire set
+# 
+#             # update / rejig / commit accordingly
+# 
+# make tag                                                             # retag version across entire set
+# 
 
+#
+# total Makefile novice here... so, um, here follows hopefully coherent and platform compatable
+# 
 
+VER=0.0.1
 SRC=../../src
 LIC=../../LICENSE
 
-components: base system color math-common render-common webgl-renderer object camera scene line particle
+COMPONENTS=\
+	base \
+	system \
+	color \
+	math-common \
+	render-common \
+	webgl-renderer \
+	object \
+	camera \
+	scene \
+	line \
+	particle
+
+
+components: ${COMPONENTS}
+
+tag:
+
+	#
+	# tag
+	# 
+	# * a possible future rejig of the dependancy tree is highly likely
+	# * so ANY change should increment version for the entire set
+	#
+
+	for COMPONENT in ${COMPONENTS}; do \
+		if [ -d three-$${COMPONENT} ]; then \
+			cd three-$${COMPONENT} && \
+			git tag ${VER} && \
+			git push origin ${VER} && \
+			cd - ;\
+		fi \
+	done
+
 
 BASE=\
 	${SRC}/Three.js
@@ -97,6 +140,7 @@ render-common: ${RENDER-COMMON}
 	#
 	# render common
 	# * perhaps ShaderMaterial can be moved to the instanceof-U-later
+	# * gets material and math via object
 	#
 
 	cp ${LIC} three-render-common/
@@ -156,6 +200,7 @@ scene: ${SCENE}
 	cat ${SCENE} >> three-scene/index.js
 
 
+
 WEBGL-RENDERER=\
 	${SRC}/extras/shaders/ShaderFlares.js \
 	${SRC}/extras/renderers/plugins/ShadowMapPlugin.js \
@@ -209,12 +254,6 @@ webgl-renderer: ${WEBGL-RENDERER}
 
 
 
-
-
-
-
-
-
 LINE=\
 	${SRC}/materials/LineBasicMaterial.js \
 	${SRC}/materials/LineDashedMaterial.js \
@@ -245,6 +284,4 @@ particle: ${PARTICLE}
 	cp ${LIC} three-particle/
 	echo "module.exports = THREE = require('three');\nrequire('three-object');\n" > three-particle/index.js
 	cat ${PARTICLE} >> three-particle/index.js
-
-
 
